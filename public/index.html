@@ -1,0 +1,116 @@
+<!doctype html>
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="scotchTodo">
+<head>
+<title>HOME</title>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+<title>Node/Angular Todo App</title>
+<!-- SCROLLS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+<style>
+html { overflow-y:scroll; }
+body { padding-top:50px; 
+background-color:#81F7F3;}
+
+a:link, a:visited {
+    display: block;
+    width: 220px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: #7A991A;
+}
+#todo-list { margin-bottom:30px; }
+#todo-form { margin-bottom:50px; }
+</style>
+<!-- SPELLS -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+<script src="core.js"></script>
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+<body ng-controller="mainController">
+<center><h1><font color="#9A2EFE" face = "Comic sans MS">Welcome to Beauty Box</font></h1><center>
+<div class="container">
+<!-- HEADER AND TODO COUNT -->
+<div class="img-rounded">
+<img src="banner.jpg" width="1100" height="300"></img> 
+</div>
+
+<div class="container">
+                   
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Gallary</a></li>
+    <li><a href="#">Contact Us</a></li> 
+    <li><a href="#">Log In</a></li>       
+  </ul>
+</div>
+
+<!-- TODO LIST -->
+<div id="todo-list" class="row">
+<div class="col-sm-3 col-md-6 col-lg-4">
+<br>
+<br>
+
+<!-- LOOP OVER THE TODOS IN $scope.todos -->
+<left><h4><p>At the Beauty Parlour, We believe in beauty with a conscience.We have created a salon that offers highest quality of services in a setting that is healthier for the environment,our guest and our staff.
+<br>
+<h3><blink><font color="#981cfb">For more services please login</font></blink></h2>
+</left>
+</div>
+
+
+<!-- FORM TO CREATE TODOS -->
+
+<div class="col-sm-8 col-md-6 col-lg-8 text-center">
+<form class="form-horizontal">
+<br>
+<br>
+<div class="form-group">
+      <label class="control-label col-sm-3" for="name">Full Name:</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-horizontal input-lg" id="name" placeholder="Enter Name">
+      </div>
+    </div>
+<div class="form-group">
+      <label class="control-label col-sm-3" for="email">E-mail Id:</label>
+      <div class="col-sm-12">
+        <input type="email" class="form-horizontal input-lg" id="email" placeholder="Enter email">
+      </div>
+    </div>
+<div class="form-group">
+      <label class="control-label col-sm-3" for="name">User Name:</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-inline input-lg" id="user name" placeholder="Enter User Name">
+      </div>
+    </div>
+<div class="form-group">
+      <label class="control-label col-sm-3" for="pwd">Password:</label>
+      <div class="col-sm-12">          
+        <input type="password" class="form-horizontal input-lg" id="pwd" placeholder="Enter password">
+      </div>
+    </div>
+
+<!-- createToDo() WILL CREATE NEW TODOS -->
+<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()" align="right">Sign Up</button>
+<br>
+If already a member? Log In
+</form>
+</div>
+</div>
+<div class="text-center text-muted">
+<p><center><strong>&copy allrights reserved</strong></center></p>
+</div>
+</div>
+</body>
+</html>
